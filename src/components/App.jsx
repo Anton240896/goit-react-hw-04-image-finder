@@ -12,13 +12,12 @@ import { SearchBarContainer } from './Searchbar/SearchBar';
 //      /*======== HOOKS =========*/
 
 export const App = () => {
-  const { query, setQuery } = useState('');
-  const { page, setPage } = useState(1);
-  const { images, setImages } = useState([]);
-  // const { totalHits, setTotalHits } = useState(0);
-  const { loading, setLoading } = useState(false);
-  const { error, setError } = useState(false);
-  const { showBtn, setShowBtn } = useState(false);
+  const [query, setQuery] = useState('');
+  const [page, setPage] = useState(1);
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [showBtn, setShowBtn] = useState(false);
 
   //   /*======= QUERY SEARCHBAR ========*/
 
