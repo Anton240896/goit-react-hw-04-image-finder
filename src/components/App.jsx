@@ -15,6 +15,7 @@ export const App = () => {
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
   const [images, setImages] = useState([]);
+  // const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [showBtn, setShowBtn] = useState(false);
@@ -45,6 +46,7 @@ export const App = () => {
         setLoading(true);
         setError(false);
         const responseData = await fetchRequestApi(page, query);
+
         if (responseData.hits.length === 0) {
           toast.error(' 🥺! Sorry, no images found, please try again!');
         }
@@ -53,7 +55,7 @@ export const App = () => {
         }
 
         setImages(prevImages => [...prevImages, ...responseData.hits]);
-        setShowBtn(Math.ceil(responseData.totalHits / 12));
+        setShowBtn(page < Math.ceil(responseData.totalHits / 12));
       } catch {
         setError(true);
         toast.error(' 🥺! Sorry, no images found, please try again!');
