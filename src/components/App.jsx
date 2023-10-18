@@ -51,6 +51,7 @@ export const App = () => {
         if (responseData.hits.length !== 0) {
           toast.success('😊! We found images');
         }
+
         setImages(prevImages => [...prevImages, ...responseData.hits]);
         setShowBtn(Math.ceil(responseData.totalHits / 12));
       } catch {
@@ -93,33 +94,3 @@ export const App = () => {
     </AppWrapper>
   );
 };
-
-//   /*======== HTTP REQUEST =========*/
-
-// async componentDidUpdate(prevProps, prevState) {
-//   const prevStateQuery = prevState.query;
-//   const prevStatePage = prevState.page;
-//   const { page, query } = this.state;
-
-//   if (prevStateQuery !== query || prevStatePage !== page) {
-//     this.setState({ loading: true, error: false });
-//     const responseData = await fetchRequestApi(page, query);
-//     try {
-//       if (responseData.hits.length === 0) {
-//         toast.error(' 🥺! Sorry, no images found, please try again!');
-//       }
-
-//       if (responseData.hits.length !== 0) {
-//         toast.success('😊! We found images');
-//       }
-//       this.setState(prevState => ({
-//         images: [...prevState.images, ...responseData.hits],
-//         showBtn: page < Math.ceil(responseData.totalHits / 12),
-//       }));
-//     } catch (error) {
-//       this.setState({ error: true });
-//     } finally {
-//       this.setState({ loading: false });
-//     }
-//   }
-// }
