@@ -68,7 +68,3 @@ export const ErrorMessageWrapper = styled.div`
   color: red;
   width: 280px;
 `;
-
-export const SearchLogo = styled.img`
-  margin-right: 50px;
-`;

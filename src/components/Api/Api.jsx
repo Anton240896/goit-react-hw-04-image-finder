@@ -10,7 +10,7 @@ export const fetchRequestApi = async (page = 1, query) => {
     key: KEY_API,
     image_type: 'photo',
     orientation: 'horizontal',
-    per_page: '12',
+    per_page: '9',
   });
   const response = await axios.get(`${BASE_URL}?${params}`);
   return response.data;
