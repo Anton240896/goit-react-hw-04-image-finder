@@ -55,7 +55,7 @@ export const App = () => {
         }
 
         setImages(prevImages => [...prevImages, ...responseData.hits]);
-        setShowBtn(page < Math.ceil(responseData.totalHits / 9));
+        setShowBtn(page < Math.ceil(responseData.totalHits / 12));
       } catch {
         setError(true);
         toast.error(' 🥺! Sorry, no images found, please try again!');
