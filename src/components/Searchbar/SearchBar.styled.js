@@ -54,8 +54,8 @@ export const SearchFormButton = styled.button`
 export const SearchFormInput = styled.input`
   display: inline-block;
   width: 100%;
-  font: inherit;
   font-size: 20px;
+  font-family: monospace;
   border: none;
   outline: none;
   padding-left: 44px;
