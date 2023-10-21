@@ -1,5 +1,18 @@
 import ReactModal from 'react-modal';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+// import { useEffect, useState } from 'react';
 
+// export const CloseWindow = () => {
+//   const [close, setClose] = useState(false);
+
+//   useEffect(() => {
+
+//     const escKeyPress = (evt) => {
+//       if(evt.key === 'Esvape' && ) {
+
+//       }
+//     }
+//   });
 const stylesModal = {
   content: {
     top: '50%',
@@ -28,7 +41,14 @@ export const ModalWindow = ({
       style={stylesModal}
       contentLabel="Image Modal"
     >
+      {/* <div>
+          <button type="button" onClick={closeModal}>
+            <AiOutlineCloseCircle size={70} />
+          </button>
+        </div> */}
+
       <img src={largeImageURL} alt={tags} width="700px" height="530px" />
     </ReactModal>
   );
 };
+// };

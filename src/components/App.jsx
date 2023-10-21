@@ -51,7 +51,7 @@ export const App = () => {
           toast.error(' 🥺! Sorry, no images found, please try again!');
         }
         if (responseData.hits.length !== 0) {
-          toast.success('😊! We found images');
+          toast.success(`'😊! We found ${responseData.totalHits} images'`);
         }
 
         setImages(prevImages => [...prevImages, ...responseData.hits]);
