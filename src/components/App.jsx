@@ -53,8 +53,6 @@ export const App = () => {
         if (responseData.hits.length !== 0) {
           toast.success(`'😊! We found ${responseData.total} images'`);
         }
-        console.log(responseData);
-        console.log(responseData);
         setImages(prevImages => [...prevImages, ...responseData.hits]);
         setShowBtn(page < Math.ceil(responseData.totalHits / 12));
       } catch {
